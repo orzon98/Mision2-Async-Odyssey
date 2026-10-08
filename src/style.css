@@ -100,3 +100,16 @@ body{
   padding: 12px;
   font-size: 1rem;
 }
+
+.state{
+  text-align: center;
+  margin-top: 24px;
+}
+
+.state--error{
+  color: red;
+}
+
+[hidden]{
+  display: none;
+}
