@@ -3,11 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/src/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mision2-async-odyssey</title>
+    <script type="module" src="/src/main.js"></script>
+    <title>¿Qué cocino hoy?</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <header class="header">
+      <h1>¿Qué cocino hoy?</h1>
+      <p>Dime que tienes en la nevera y te digo que cocinar</p>
+    </header>
+
+    <main class = "main">
+      <form id="form-busqueda">
+        <input id="ingrediente" type="text" placeholder="Ej: Tomate, Pollo, huevos..." autocomplete="off"/>
+        <button id="buscar" type="submit">Buscar</button>
+      </form>
+    
+
+      <ul id="lista-ingredientes" class="lista"></ul>
+
+      <p id="cargando" class="state" hidden>Cargando recetas...</p>
+      <p id="error" class="state state--error" hidden></p>
+      <p id="vacio" class="state" hidden>No hay recetas con estos ingredientes</p>
+
+      <section id="resultados" class="grid">
+        <article class="card">
+          <img src="https://www.themealdb.com/images/media/meals/58oia61564916529.jpg" alt="Receta de ejemplo" />
+          <h3>Nombre de la receta</h3>
+        </article>
+        <article class="card">
+          <img src="https://www.themealdb.com/images/media/meals/58oia61564916529.jpg" alt="Receta de ejemplo" />
+          <h3>Otra receta con un nombre más largo</h3>
+        </article>
+        <article class="card">
+          <img src="https://www.themealdb.com/images/media/meals/58oia61564916529.jpg" alt="Receta de ejemplo" />
+          <h3>Receta 3</h3>
+        </article>
+      </section>
+    </main>
   </body>
 </html>
