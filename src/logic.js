@@ -21,9 +21,3 @@ export function combinarResultados(listas) {
     return [...mapa.values()].toSorted((a, b) => b.coincidencias - a.coincidencias);
 }
 
-const prueba = [
-    [{ idMeal: "1", strMeal: "A", strMealThumb: "a.jpg" }, { idMeal: "2", strMeal: "B", strMealThumb: "b.jpg" }],
-    [{ idMeal: "2", strMeal: "B", strMealThumb: "b.jpg" }, { idMeal: "3", strMeal: "C", strMealThumb: "c.jpg" }],
-];
-console.log(combinarResultados(prueba));
-// B primero con coincidencias: 2, luego A y C con 1
